@@ -4,7 +4,9 @@ This directory contains comprehensive Domain-Driven Design (DDD) documentation f
 
 ## 📚 Documentation Overview
 
-### [DDD_MAPPING.md](./DDD_MAPPING.md)
+### Domain-Driven Design (DDD)
+
+#### [DDD_MAPPING.md](./DDD_MAPPING.md)
 **Complete DDD Analysis** - The main reference document containing:
 - Bounded contexts identification
 - Aggregate definitions with entities and value objects
@@ -44,6 +46,41 @@ This directory contains comprehensive Domain-Driven Design (DDD) documentation f
 
 **Best for**: Visual learners and architectural discussions.
 
+### Database Documentation
+
+#### [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md)
+**Complete Schema Reference** - Comprehensive database documentation:
+- All table structures with column details
+- Constraints and indexes
+- Foreign key relationships
+- Row-level security policies
+- Views and materialized views
+- Migration strategy
+- Best practices
+
+**Best for**: Understanding database structure, writing queries, and database administration.
+
+#### [DATABASE_ER_DIAGRAMS.md](./DATABASE_ER_DIAGRAMS.md)
+**Entity-Relationship Diagrams** - Visual database schema using Mermaid:
+- Complete schema overview
+- Domain-specific ER diagrams
+- Table relationships
+- Enum type definitions
+- Cardinality mappings
+
+**Best for**: Visual understanding of data relationships and database design.
+
+#### [DATABASE_QUERIES.md](./DATABASE_QUERIES.md)
+**Query Reference Guide** - Common queries and patterns:
+- Event, ticket, and reservation queries
+- Reporting and statistics queries
+- User and access control queries
+- Billing and payment queries
+- Performance and maintenance queries
+- Best practices and optimization tips
+
+**Best for**: Daily database work, writing reports, and query optimization.
+
 ---
 
 ## 🎯 Quick Start Guide
@@ -52,19 +89,29 @@ This directory contains comprehensive Domain-Driven Design (DDD) documentation f
 
 1. **Start with**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) - Get visual overview
 2. **Read**: [DDD_MAPPING.md](./DDD_MAPPING.md) sections 1-2 - Understand bounded contexts
-3. **Reference**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) - While coding
+3. **Study**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Learn database structure
+4. **Reference**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) - While coding
+
+### For Database Developers
+
+1. **Start with**: [DATABASE_ER_DIAGRAMS.md](./DATABASE_ER_DIAGRAMS.md) - Visual schema
+2. **Read**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Complete table reference
+3. **Use**: [DATABASE_QUERIES.md](./DATABASE_QUERIES.md) - Query examples
+4. **Map to**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 4 - Repositories
 
 ### For Architects
 
 1. **Review**: [DDD_MAPPING.md](./DDD_MAPPING.md) sections 1, 11-14 - Strategic design
 2. **Study**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) - Context maps and boundaries
-3. **Evaluate**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 16 - Future enhancements
+3. **Examine**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Data architecture
+4. **Evaluate**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 16 - Future enhancements
 
 ### For Product Owners
 
 1. **Understand**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 10 - Ubiquitous language
 2. **Review**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) state machines - Business workflows
 3. **Learn**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 13 - Core vs supporting domains
+4. **Explore**: [DATABASE_ER_DIAGRAMS.md](./DATABASE_ER_DIAGRAMS.md) - Data relationships
 
 ---
 
@@ -114,26 +161,42 @@ SubscriptionDescriptor
 - **Full details**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 2
 - **Class diagrams**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) sections 2-5
 - **Quick lookup**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) "Aggregate Roots Quick Reference"
+- **Database tables**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Core Entities
 
 ### Working with Repositories
 - **Patterns**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 4
 - **Query examples**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) "Repository Query Patterns"
 - **NPJT syntax**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) "Useful SQL Patterns"
+- **SQL queries**: [DATABASE_QUERIES.md](./DATABASE_QUERIES.md) - All categories
+
+### Database Work
+- **Schema reference**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Complete documentation
+- **Visual diagrams**: [DATABASE_ER_DIAGRAMS.md](./DATABASE_ER_DIAGRAMS.md) - All ER diagrams
+- **Query examples**: [DATABASE_QUERIES.md](./DATABASE_QUERIES.md) - By use case
+- **Migrations**: `src/main/resources/alfio/db/PGSQL/` - Flyway scripts
 
 ### Domain Services
 - **Overview**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 3
 - **Method signatures**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) "Key Domain Services Cheat Sheet"
 - **Flow diagrams**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) sections 6, 10-12
+- **Data access**: [DATABASE_QUERIES.md](./DATABASE_QUERIES.md) - Repository queries
 
 ### Business Workflows
 - **State machines**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) sections 7-9
 - **Process flows**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) sections 10-12
 - **Invariants**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) "Invariant Enforcement Examples"
+- **Database constraints**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Constraints section
+
+### Reporting & Analytics
+- **Query examples**: [DATABASE_QUERIES.md](./DATABASE_QUERIES.md) "Reporting & Statistics"
+- **Views**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) "Views" section
+- **Statistics**: [DATABASE_ER_DIAGRAMS.md](./DATABASE_ER_DIAGRAMS.md) - Statistics views
 
 ### Integration & Anti-Corruption Layers
 - **Design**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 9
 - **Extension system**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) section 13
 - **Patterns**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) "Integration Points"
+- **Database hooks**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Extension System
 
 ---
 
