@@ -1,1 +1,0 @@
-Image credit: NASA, ESA, CSA, and STScI

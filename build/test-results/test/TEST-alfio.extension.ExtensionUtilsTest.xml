@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alfio.extension.ExtensionUtilsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:32" hostname="mac.home" time="0.075">
-  <properties/>
-  <testcase name="convertIntegerToJson()" classname="alfio.extension.ExtensionUtilsTest" time="0.073"/>
-  <testcase name="convertDecimalToJson()" classname="alfio.extension.ExtensionUtilsTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

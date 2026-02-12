@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alfio.manager.TicketReservationManagerTest$TestCancelReservationsPendingPayment" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:51" hostname="mac.home" time="0.029">
-  <properties/>
-  <testcase name="cancelExpiredReservationsPendingPaymentPending()" classname="alfio.manager.TicketReservationManagerTest$TestCancelReservationsPendingPayment" time="0.026"/>
-  <testcase name="cancelExpiredReservationsPendingPaymentConfirmed()" classname="alfio.manager.TicketReservationManagerTest$TestCancelReservationsPendingPayment" time="0.003"/>
-  <system-out><![CDATA[2025-07-13 12:08:51 5.15.0 WARNING Trying to force pending payment cancellation for reservation ID reservation-id2. Successful: true 
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

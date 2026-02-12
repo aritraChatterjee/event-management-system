@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alfio.manager.system.ReservationPriceCalculatorTest$TaxCalculatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:52" hostname="mac.home" time="0.001">
-  <properties/>
-  <testcase name="allItemsAreSubjectedToTaxation()" classname="alfio.manager.system.ReservationPriceCalculatorTest$TaxCalculatorTest" time="0.001"/>
-  <testcase name="additionalItemsAreNotSubjectedToTaxation()" classname="alfio.manager.system.ReservationPriceCalculatorTest$TaxCalculatorTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
