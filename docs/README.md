@@ -81,6 +81,32 @@ This directory contains comprehensive Domain-Driven Design (DDD) documentation f
 
 **Best for**: Daily database work, writing reports, and query optimization.
 
+### API Documentation
+
+#### [API_DOCUMENTATION.md](./API_DOCUMENTATION.md)
+**Complete API Reference** - Full REST API documentation:
+- Public API (v2) endpoints
+- Admin API endpoints  
+- Authentication methods
+- Request/response examples
+- Error handling
+- Rate limiting
+- Webhooks
+- Payment API
+
+**Best for**: API integration, building clients, and third-party integrations.
+
+#### [API_QUICK_REFERENCE.md](./API_QUICK_REFERENCE.md)
+**API Quick Start Guide** - Practical API usage:
+- Common curl examples
+- Quick start tutorials
+- Request snippets (JavaScript, Python)
+- Common workflows
+- Best practices
+- Testing tips
+
+**Best for**: Quick API lookups, copy-paste examples, and rapid prototyping.
+
 ---
 
 ## 🎯 Quick Start Guide
@@ -91,6 +117,13 @@ This directory contains comprehensive Domain-Driven Design (DDD) documentation f
 2. **Read**: [DDD_MAPPING.md](./DDD_MAPPING.md) sections 1-2 - Understand bounded contexts
 3. **Study**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Learn database structure
 4. **Reference**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) - While coding
+
+### For API Developers
+
+1. **Start with**: [API_QUICK_REFERENCE.md](./API_QUICK_REFERENCE.md) - Quick examples
+2. **Read**: [API_DOCUMENTATION.md](./API_DOCUMENTATION.md) - Complete API reference
+3. **Map to**: [DDD_MAPPING.md](./DDD_MAPPING.md) - Understand domain model
+4. **Test**: Use curl examples and sandbox environment
 
 ### For Database Developers
 
@@ -157,11 +190,18 @@ SubscriptionDescriptor
 
 ## 📖 Navigation by Topic
 
+### API Integration
+- **Quick start**: [API_QUICK_REFERENCE.md](./API_QUICK_REFERENCE.md) - Curl examples
+- **Complete reference**: [API_DOCUMENTATION.md](./API_DOCUMENTATION.md) - All endpoints
+- **Domain model**: [DDD_MAPPING.md](./DDD_MAPPING.md) - Understand entities
+- **Data structure**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Response formats
+
 ### Understanding Aggregates
 - **Full details**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 2
 - **Class diagrams**: [DDD_DIAGRAMS.md](./DDD_DIAGRAMS.md) sections 2-5
 - **Quick lookup**: [DDD_QUICK_REFERENCE.md](./DDD_QUICK_REFERENCE.md) "Aggregate Roots Quick Reference"
 - **Database tables**: [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Core Entities
+- **API endpoints**: [API_DOCUMENTATION.md](./API_DOCUMENTATION.md) - CRUD operations
 
 ### Working with Repositories
 - **Patterns**: [DDD_MAPPING.md](./DDD_MAPPING.md) section 4
