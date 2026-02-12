@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.payment.SaferpayManagerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:52" hostname="mac.home" time="0.069">
+  <properties/>
+  <testcase name="saferpayOffline()" classname="alfio.manager.payment.SaferpayManagerTest" time="0.061"/>
+  <testcase name="internalProcessAuthorizedWebhook()" classname="alfio.manager.payment.SaferpayManagerTest" time="0.003"/>
+  <testcase name="internalProcessCancelledWebhook()" classname="alfio.manager.payment.SaferpayManagerTest" time="0.002"/>
+  <testcase name="internalProcessCapturedWebhook()" classname="alfio.manager.payment.SaferpayManagerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

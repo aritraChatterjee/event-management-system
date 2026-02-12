@@ -1,9 +1,9 @@
 {
     "build": {
-        "type": "gradle",
-        "goal": "clever -x test"
+        "type": "maven",
+        "goal": "package -DskipTests"
     },
     "deploy": {
-        "jarName": "build/clevercloud/alfio-boot.jar"
+        "jarName": "target/clevercloud/alfio-boot.jar"
     }
 }

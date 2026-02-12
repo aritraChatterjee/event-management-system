@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.AdditionalServiceManagerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:49" hostname="mac.home" time="0.245">
+  <properties/>
+  <testcase name="[1] availQuantity=-1" classname="alfio.manager.AdditionalServiceManagerTest" time="0.242"/>
+  <testcase name="[2] availQuantity=1" classname="alfio.manager.AdditionalServiceManagerTest" time="0.001"/>
+  <testcase name="[3] availQuantity=5" classname="alfio.manager.AdditionalServiceManagerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

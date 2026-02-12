@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.extension.ScriptValidationTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:32" hostname="mac.home" time="0.036">
+  <properties/>
+  <testcase name="testBoundariesExitValidation()" classname="alfio.extension.ScriptValidationTest" time="0.022"/>
+  <testcase name="testLabeledStatementValidation()" classname="alfio.extension.ScriptValidationTest" time="0.003"/>
+  <testcase name="testWithStatementValidation()" classname="alfio.extension.ScriptValidationTest" time="0.001"/>
+  <testcase name="testBaseScriptValidation()" classname="alfio.extension.ScriptValidationTest" time="0.002"/>
+  <testcase name="testFunctionLevelsLegitValidation()" classname="alfio.extension.ScriptValidationTest" time="0.001"/>
+  <testcase name="testWhileLoopValidation()" classname="alfio.extension.ScriptValidationTest" time="0.002"/>
+  <testcase name="testDoLoopValidation()" classname="alfio.extension.ScriptValidationTest" time="0.001"/>
+  <testcase name="testBoundariesReflectionValidation()" classname="alfio.extension.ScriptValidationTest" time="0.002"/>
+  <testcase name="testFunctionLevelsValidation()" classname="alfio.extension.ScriptValidationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

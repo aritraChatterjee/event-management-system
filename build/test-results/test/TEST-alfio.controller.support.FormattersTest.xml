@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.controller.support.FormattersTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:31" hostname="mac.home" time="0.185">
+  <properties/>
+  <testcase name="getFormattedDates()" classname="alfio.controller.support.FormattersTest" time="0.12"/>
+  <testcase name="getFormattedLink()" classname="alfio.controller.support.FormattersTest" time="0.065"/>
+  <testcase name="getFormattedLinkWithAriaLabel()" classname="alfio.controller.support.FormattersTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:51" hostname="mac.home" time="0.081">
+  <properties/>
+  <testcase name="emailSentBecauseReservationIsNotFreeOfCharge()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.062"/>
+  <testcase name="emailSentBecauseTicketListIsNull()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.003"/>
+  <testcase name="emailSentBecauseFlagIsSetToFalse()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.002"/>
+  <testcase name="emailSentBecauseTicketIsNotSent()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.002"/>
+  <testcase name="emailSentBecauseThereIsMoreThanOneTicketInTheReservation()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.002"/>
+  <testcase name="emailNOTSentBecauseFlagIsSetToTrue()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.002"/>
+  <testcase name="emailNotSentBecauseReservationNotFinalized()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.002"/>
+  <testcase name="emailSentBecauseTicketHolderEmailIsDifferentFromReservation()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.002"/>
+  <testcase name="emailSentBecauseTicketListIsEmpty()" classname="alfio.manager.TicketReservationManagerTest$TestSendReservationEmailIfNecessary" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

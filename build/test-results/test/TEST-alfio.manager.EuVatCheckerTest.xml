@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.EuVatCheckerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:50" hostname="mac.home" time="0.065">
+  <properties/>
+  <testcase name="testForeignBusinessVATNotAppliedValidationDisabled()" classname="alfio.manager.EuVatCheckerTest" time="0.035"/>
+  <testcase name="testForeignBusinessVATApplied()" classname="alfio.manager.EuVatCheckerTest" time="0.001"/>
+  <testcase name="performCheckRequestFailed()" classname="alfio.manager.EuVatCheckerTest" time="0.002"/>
+  <testcase name="testEUBusinessVATNotAppliedValidationDisabled()" classname="alfio.manager.EuVatCheckerTest" time="0.001"/>
+  <testcase name="testForeignBusinessVATNotApplied()" classname="alfio.manager.EuVatCheckerTest" time="0.001"/>
+  <testcase name="performCheckKO()" classname="alfio.manager.EuVatCheckerTest" time="0.024"/>
+  <testcase name="performCheckOK()" classname="alfio.manager.EuVatCheckerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

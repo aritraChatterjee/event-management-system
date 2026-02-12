@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EventManager: handle categories" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:50" hostname="mac.home" time="0.123">
+  <properties/>
+  <testcase name="create tickets for the unbounded categories" classname="alfio.manager.EventManagerCategoriesTest" time="0.121"/>
+  <testcase name="create tickets only for the bounded categories" classname="alfio.manager.EventManagerCategoriesTest" time="0.001"/>
+  <testcase name="create tickets for the unbounded category" classname="alfio.manager.EventManagerCategoriesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.util.TemplateManagerTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:03" hostname="mac.home" time="0.002">
+  <properties/>
+  <testcase name="parseNestedI18N()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="parseMixedI18N()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="simpleParams()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="[1] input={{#i18n}}parameter[1][2][3]{{/i18n}}" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="[2] input={{#i18n}} parameter[1][2][3]{{/i18n}}" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="[3] input={{#i18n}}parameter [1][2][3]{{/i18n}}" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="[4] input={{#i18n}}parameter [1] [2][3]{{/i18n}}" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="[5] input={{#i18n}}parameter [1] [2] [3]{{/i18n}}" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="[6] input={{#i18n}}parameter [1] [2] [3] {{/i18n}}" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="[7] input={{#i18n}} parameter [1] [2] [3] {{/i18n}}" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="parseString()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="parseEmptyString()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="parseOnlyI18N()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="parseMultipleMixedI18N()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <testcase name="parseNested2I18N()" classname="alfio.util.TemplateManagerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

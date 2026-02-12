@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.model.SummaryPriceContainerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:01" hostname="mac.home" time="0.032">
+  <properties/>
+  <testcase name="testSummaryPriceBeforeVatIncluded()" classname="alfio.model.SummaryPriceContainerTest" time="0.031"/>
+  <testcase name="testSummaryPriceBeforeVatExcluded()" classname="alfio.model.SummaryPriceContainerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.util.ImageUtilTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:02" hostname="mac.home" time="1.01">
+  <properties/>
+  <testcase name="createQRCodeWithDescription()" classname="alfio.util.ImageUtilTest" time="1.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

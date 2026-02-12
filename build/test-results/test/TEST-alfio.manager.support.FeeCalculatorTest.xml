@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.support.FeeCalculatorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:52" hostname="mac.home" time="0.003">
+  <properties/>
+  <testcase name="testCombinations()" classname="alfio.manager.support.FeeCalculatorTest" time="0.001"/>
+  <testcase name="applyMaximumFee()" classname="alfio.manager.support.FeeCalculatorTest" time="0.0"/>
+  <testcase name="calculateFixedFee()" classname="alfio.manager.support.FeeCalculatorTest" time="0.001"/>
+  <testcase name="calculatePercentageFeeWithPercentSign()" classname="alfio.manager.support.FeeCalculatorTest" time="0.0"/>
+  <testcase name="calculatePercentageAndFixedFee()" classname="alfio.manager.support.FeeCalculatorTest" time="0.0"/>
+  <testcase name="applyMinimumFee()" classname="alfio.manager.support.FeeCalculatorTest" time="0.001"/>
+  <testcase name="calculatePercentageFee()" classname="alfio.manager.support.FeeCalculatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

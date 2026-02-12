@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EventManager: handle Token modifications" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:50" hostname="mac.home" time="0.031">
+  <properties/>
+  <testcase name="handle the ticket addition" classname="alfio.manager.EventManagerHandleTokenModificationTest" time="0.028"/>
+  <testcase name="handle the activation of access restriction" classname="alfio.manager.EventManagerHandleTokenModificationTest" time="0.001"/>
+  <testcase name="fail if there are not enough tickets" classname="alfio.manager.EventManagerHandleTokenModificationTest" time="0.001"/>
+  <testcase name="handle the ticket removal" classname="alfio.manager.EventManagerHandleTokenModificationTest" time="0.0"/>
+  <testcase name="handle the deactivation of access restriction" classname="alfio.manager.EventManagerHandleTokenModificationTest" time="0.0"/>
+  <testcase name="do nothing if both categories are not 'access restricted'" classname="alfio.manager.EventManagerHandleTokenModificationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

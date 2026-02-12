@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.e2e.NormalFlowE2ETest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:32" hostname="mac.home" time="0.006">
+  <properties/>
+  <testcase name="testFlow()" classname="alfio.e2e.NormalFlowE2ETest" time="0.006"/>
+  <system-out><![CDATA[    _    _  __  _       
+   / \  | |/ _|(_) ___  
+  / _ \ | | |_ | |/ _ \ 
+ / ___ \| |  _|| | (_) |
+/_/   \_\_|_|(_)_|\___/ 
+
+>> powered by Spring Boot
+
+2025-07-13T12:08:32.547+02:00  INFO 69500 --- [Alf.io] [    Test worker] a.e.NormalFlowE2ETest                    : Starting NormalFlowE2ETest using Java 21.0.2 with PID 69500 (started by aritra in /Users/aritra/tech/git-repo/event-management-system)
+2025-07-13T12:08:32.547+02:00  INFO 69500 --- [Alf.io] [    Test worker] a.e.NormalFlowE2ETest                    : The following 3 profiles are active: "dev", "disable-jobs", "integration-test"
+2025-07-13T12:08:32.701+02:00  INFO 69500 --- [Alf.io] [    Test worker] a.e.NormalFlowE2ETest                    : e2e profile was not detected, test will be skipped
+2025-07-13T12:08:32.705+02:00  INFO 69500 --- [Alf.io] [    Test worker] a.e.NormalFlowE2ETest                    : Started NormalFlowE2ETest in 0.186 seconds (process running for 5.588)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

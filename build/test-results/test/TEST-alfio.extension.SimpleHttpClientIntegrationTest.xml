@@ -1,0 +1,6553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.extension.SimpleHttpClientIntegrationTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:48" hostname="mac.home" time="0.39">
+  <properties/>
+  <testcase name="testPostWithHeaders()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.263"/>
+  <testcase name="testSimpleGetWithHeaders()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.011"/>
+  <testcase name="testSimpleGet()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.009"/>
+  <testcase name="testJsonBody()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.01"/>
+  <testcase name="testHeadWithHeaders()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.01"/>
+  <testcase name="testHead()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.006"/>
+  <testcase name="testPost()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.007"/>
+  <testcase name="testPostBody()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.02"/>
+  <testcase name="testPostFile()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.014"/>
+  <testcase name="testPostForm()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.011"/>
+  <testcase name="testPostJson()" classname="alfio.extension.SimpleHttpClientIntegrationTest" time="0.024"/>
+  <system-out><![CDATA[2025-07-13 12:08:48 5.15.0 INFO 4243 started on port: 4243 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  0300a874-5516-48b5-a4a1-84f2f63d330a
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56349"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56349"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path matched
+  body matched
+  headers didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 no expectation for:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56349"
+  }
+
+ returning response:
+
+  {
+    "statusCode" : 404,
+    "reasonPhrase" : "Not Found"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56349"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56349"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56349"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ from expectation:
+
+  0300a874-5516-48b5-a4a1-84f2f63d330a
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  69374cac-4572-4153-80bf-054f3e47d507
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path matched
+  body matched
+  headers didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 no expectation for:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+
+ returning response:
+
+  {
+    "statusCode" : 404,
+    "reasonPhrase" : "Not Found"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "reasonPhrase" : "OK",
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "ok"
+  }
+
+ for request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56351"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "reasonPhrase" : "OK",
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "ok"
+  }
+
+ from expectation:
+
+  69374cac-4572-4153-80bf-054f3e47d507
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  45bf861d-6262-4da5-934f-fa2acb487bc9
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-1",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-1",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-1",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-1",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "reasonPhrase" : "OK",
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "ok"
+  }
+
+ for request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-1",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "reasonPhrase" : "OK",
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "ok"
+  }
+
+ from expectation:
+
+  45bf861d-6262-4da5-934f-fa2acb487bc9
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-2-failure",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-2-failure",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-2-failure",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-2-failure",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 no expectation for:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-2-failure",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56353"
+  }
+
+ returning response:
+
+  {
+    "statusCode" : 404,
+    "reasonPhrase" : "Not Found"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56355"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56355"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56355"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56355"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56355"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "reasonPhrase" : "OK",
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "{\"key\": \"value\"}"
+  }
+
+ for request:
+
+  {
+    "method" : "GET",
+    "path" : "/simple-get-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56355"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "reasonPhrase" : "OK",
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "{\"key\": \"value\"}"
+  }
+
+ from expectation:
+
+  a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  ef9a1f5e-a6a0-499a-89be-c2a962979d42
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path matched
+  body matched
+  headers didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 no expectation for:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ returning response:
+
+  {
+    "statusCode" : 404,
+    "reasonPhrase" : "Not Found"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200
+  }
+
+ for request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head-header",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Custom-Header" : [ "Custom-Value" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56357"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200
+  }
+
+ from expectation:
+
+  ef9a1f5e-a6a0-499a-89be-c2a962979d42
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200
+  }
+
+ for request:
+
+  {
+    "method" : "HEAD",
+    "path" : "/simple-head",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56359"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200
+  }
+
+ from expectation:
+
+  d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  76c7792a-1ac5-440a-ba14-183db9142a02
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "0" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56361"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ from expectation:
+
+  76c7792a-1ac5-440a-ba14-183db9142a02
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-body",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "2355d05d-0007-4313-ba59-886f9bb13880",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  2355d05d-0007-4313-ba59-886f9bb13880
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-body",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "2355d05d-0007-4313-ba59-886f9bb13880",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-body",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "text/plain" ],
+      "Content-Length" : [ "7" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56363",
+    "body" : "content"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ from expectation:
+
+  2355d05d-0007-4313-ba59-886f9bb13880
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-file",
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "subString" : true,
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "e5af71fe-9a58-406c-8842-65e92ca8f2f1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  e5af71fe-9a58-406c-8842-65e92ca8f2f1
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-body",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "2355d05d-0007-4313-ba59-886f9bb13880",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-file",
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "subString" : true,
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "e5af71fe-9a58-406c-8842-65e92ca8f2f1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-file",
+    "headers" : {
+      "content-length" : [ "199" ],
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "multipart/form-data;boundary=\"ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\"" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56365",
+    "body" : "--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6\r\nContent-Disposition: form-data; name=file; filename=test18010603846425526402test\r\nContent-Type: text/plain\r\n\r\ncontent\r\n--ca29ba6c-a4bb-4bdc-af1e-52e79e353cf6--"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ from expectation:
+
+  e5af71fe-9a58-406c-8842-65e92ca8f2f1
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-form",
+      "body" : {
+        "type" : "PARAMETERS",
+        "parameters" : {
+          "k2" : [ "v2" ],
+          "k1" : [ "v1" ]
+        }
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "be92688d-cd10-4b53-a2bd-8318e747b24b",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  be92688d-cd10-4b53-a2bd-8318e747b24b
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-body",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "2355d05d-0007-4313-ba59-886f9bb13880",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-file",
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "subString" : true,
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "e5af71fe-9a58-406c-8842-65e92ca8f2f1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-form",
+      "body" : {
+        "type" : "PARAMETERS",
+        "parameters" : {
+          "k2" : [ "v2" ],
+          "k1" : [ "v1" ]
+        }
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "be92688d-cd10-4b53-a2bd-8318e747b24b",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-form",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/x-www-form-urlencoded" ],
+      "Content-Length" : [ "11" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56367",
+    "body" : "k1=v1&k2=v2"
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ from expectation:
+
+  be92688d-cd10-4b53-a2bd-8318e747b24b
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-json",
+      "body" : {
+        "key" : "value"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "d0d0f8eb-e814-4fe4-be45-65ac6d6048d1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  d0d0f8eb-e814-4fe4-be45-65ac6d6048d1
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-body",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "2355d05d-0007-4313-ba59-886f9bb13880",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-file",
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "subString" : true,
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "e5af71fe-9a58-406c-8842-65e92ca8f2f1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-form",
+      "body" : {
+        "type" : "PARAMETERS",
+        "parameters" : {
+          "k2" : [ "v2" ],
+          "k1" : [ "v1" ]
+        }
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "be92688d-cd10-4b53-a2bd-8318e747b24b",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-json",
+      "body" : {
+        "key" : "value"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "d0d0f8eb-e814-4fe4-be45-65ac6d6048d1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path matched
+  body didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 no expectation for:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "17" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "not" : "correct"
+    }
+  }
+
+ returning response:
+
+  {
+    "statusCode" : 404,
+    "reasonPhrase" : "Not Found"
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-body",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "2355d05d-0007-4313-ba59-886f9bb13880",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-file",
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "subString" : true,
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "e5af71fe-9a58-406c-8842-65e92ca8f2f1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-form",
+      "body" : {
+        "type" : "PARAMETERS",
+        "parameters" : {
+          "k2" : [ "v2" ],
+          "k1" : [ "v1" ]
+        }
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "be92688d-cd10-4b53-a2bd-8318e747b24b",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-json",
+      "body" : {
+        "key" : "value"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "d0d0f8eb-e814-4fe4-be45-65ac6d6048d1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ from expectation:
+
+  d0d0f8eb-e814-4fe4-be45-65ac6d6048d1
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "0300a874-5516-48b5-a4a1-84f2f63d330a",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "69374cac-4572-4153-80bf-054f3e47d507",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-1"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "ok"
+    },
+    "id" : "45bf861d-6262-4da5-934f-fa2acb487bc9",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/simple-get-json"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "reasonPhrase" : "OK",
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\"key\": \"value\"}"
+    },
+    "id" : "a3ca4b19-34aa-4b26-84c0-b1fca3fa83b1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head-header",
+      "headers" : {
+        "Custom-Header" : [ "Custom-Value" ]
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "ef9a1f5e-a6a0-499a-89be-c2a962979d42",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "HEAD",
+      "path" : "/simple-head"
+    },
+    "httpResponse" : {
+      "statusCode" : 200
+    },
+    "id" : "d95f2e79-17ad-44aa-99dd-4aa6a7c66b5f",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "76c7792a-1ac5-440a-ba14-183db9142a02",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-body",
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "2355d05d-0007-4313-ba59-886f9bb13880",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-file",
+      "body" : {
+        "type" : "STRING",
+        "string" : "content",
+        "subString" : true,
+        "contentType" : "text/plain; charset=utf-8"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "e5af71fe-9a58-406c-8842-65e92ca8f2f1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ didn't match expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-form",
+      "body" : {
+        "type" : "PARAMETERS",
+        "parameters" : {
+          "k2" : [ "v2" ],
+          "k1" : [ "v1" ]
+        }
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "be92688d-cd10-4b53-a2bd-8318e747b24b",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ because:
+
+  method matched
+  path didn't match
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/simple-post-json",
+      "body" : {
+        "key" : "value"
+      }
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "text/plain" ]
+      },
+      "body" : "Hello World!"
+    },
+    "id" : "d0d0f8eb-e814-4fe4-be45-65ac6d6048d1",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/simple-post-json",
+    "headers" : {
+      "User-Agent" : [ "Java-http-client/21.0.2" ],
+      "Upgrade" : [ "h2c" ],
+      "Host" : [ "localhost:4243" ],
+      "HTTP2-Settings" : [ "AAEAAEAAAAIAAAABAAMAAABkAAQBAAAAAAUAAEAA" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "15" ],
+      "Connection" : [ "Upgrade, HTTP2-Settings" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "protocol" : "HTTP_1_1",
+    "localAddress" : "127.0.0.1:4243",
+    "remoteAddress" : "127.0.0.1:56369",
+    "body" : {
+      "key" : "value"
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "text/plain" ]
+    },
+    "body" : "Hello World!"
+  }
+
+ from expectation:
+
+  d0d0f8eb-e814-4fe4-be45-65ac6d6048d1
+ 
+2025-07-13 12:08:48 5.15.0 INFO 4243 stopped for port: 4243 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.model.modification.support.LocationDescriptorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:01" hostname="mac.home" time="0.012">
+  <properties/>
+  <testcase name="testLocationDescriptorHEREWithTypeSet()" classname="alfio.model.modification.support.LocationDescriptorTest" time="0.011"/>
+  <testcase name="testLocationDescriptorGoogleWithTypeSet()" classname="alfio.model.modification.support.LocationDescriptorTest" time="0.001"/>
+  <testcase name="testLocationDescriptorNONEWithTypeSet()" classname="alfio.model.modification.support.LocationDescriptorTest" time="0.0"/>
+  <testcase name="testLocationDescriptorGoogle()" classname="alfio.model.modification.support.LocationDescriptorTest" time="0.0"/>
+  <testcase name="testLocationDescriptorNone()" classname="alfio.model.modification.support.LocationDescriptorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

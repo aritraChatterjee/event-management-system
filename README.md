@@ -18,6 +18,7 @@ The open source ticket reservation system.
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#architecture--domain-driven-design">Architecture & Domain-Driven Design</a></li>
     <li><a href="#spring-profiles">Spring profiles</a></li>
     <li><a href="#run-in-development-mode">Run in development mode</a></li>
     <li><a href="#contributing-to-alf.io">Contributing to alf.io</a></li>
@@ -40,6 +41,35 @@ Additionally, the database user that creates and uses the tables should not be a
 > As the work for Alf.io [v2](https://github.com/alfio-event/alf.io/milestones) has started, this branch may contain **unstable** and **untested** code.
 > If you want to build and deploy alf.io by yourself, please start from a [Released version](https://github.com/alfio-event/alf.io/releases).
 
+## Architecture & Domain-Driven Design
+
+Alf.io follows **Domain-Driven Design (DDD)** principles with clear bounded contexts and well-defined aggregates. 
+
+📚 **Complete DDD documentation is available in the [docs/](./docs/) directory:**
+
+- **[DDD Mapping](./docs/DDD_MAPPING.md)** - Complete domain model analysis with bounded contexts, aggregates, repositories, and strategic design
+- **[DDD Quick Reference](./docs/DDD_QUICK_REFERENCE.md)** - Developer cheat sheet with common patterns and code examples  
+- **[DDD Diagrams](./docs/DDD_DIAGRAMS.md)** - Visual diagrams including context maps, state machines, and process flows
+- **[Documentation Guide](./docs/README.md)** - Navigation guide for all DDD documentation
+
+### Key Bounded Contexts
+
+- **Event Management** - Creating and managing events, ticket categories, and additional services
+- **Reservation & Ticketing** - Handling ticket reservations, purchases, and the ticket lifecycle
+- **Subscription** - Managing recurring subscription-based access to events
+- **Billing** - Invoice and billing document generation
+- **Organization & User** - Multi-tenant organization and user management
+
+### Core Aggregates
+
+- `Event` - Event with ticket categories and additional services
+- `TicketReservation` - Reservation with tickets and billing details
+- `SubscriptionDescriptor` - Subscription plans and instances
+- `Organization` - Organizations with users and groups
+- `BillingDocument` - Invoices, receipts, and credit notes
+
+For a complete understanding of the domain model, architecture patterns, and development guidelines, please refer to the **[DDD documentation](./docs/)**.
+
 ## Spring profiles
 
 There are the following spring profiles
@@ -52,36 +82,56 @@ There are the following spring profiles
 
 ## Run in development mode
 
-### Gradle Build
+### Maven Build
 
-This build includes a copy of the Gradle wrapper. You don't have to have Gradle installed on your system to build
-the project. Simply execute the wrapper along with the appropriate task, for example
+This project uses Maven for building. You need Maven 3.6+ installed on your system.
 
+Build the project:
+```bash
+mvn clean package
 ```
-./gradlew clean
+
+Skip tests during build:
+```bash
+mvn clean package -DskipTests
 ```
 
 #### Running with multiple profiles
 
-You must specify a project property at the command line, such as
+You can run the application with different profiles:
+```bash
+mvn spring-boot:run -Pdev
 ```
-./gradlew -Pprofile=dev :bootRun
-```
-The local "bootRun" task has the following prerequisites:
+
+The local development setup has the following prerequisites:
 
 - a PostgreSQL (version 10 or later) instance up and running on localhost:5432
 - a _postgres_ user having a password: _password_
 - a database named _alfio_
 
-```
+Start PostgreSQL with Docker:
+```bash
 docker run -d --name alfio-db -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_DB=alfio --restart unless-stopped postgres 
 ```
 
-once started, alf.io will create all the required tables in the database, and be available at http://localhost:8080/admin. You can log in using the default Username _admin_ and the password which was printed on the console.
+Once started, alf.io will create all the required tables in the database, and be available at http://localhost:8080/admin. You can log in using the default Username _admin_ and the password which was printed on the console.
 
-You can get a list of all supported Gradle tasks by running
+#### Additional Maven Commands
+
+Run tests:
+```bash
+mvn test
 ```
-./gradlew tasks --all
+
+Generate coverage report:
+```bash
+mvn verify
+# Coverage report available at: target/jacoco/index.html
+```
+
+Check for dependency updates:
+```bash
+mvn versions:display-dependency-updates
 ```
 
 You can configure additional System properties (if you need them) by creating the following file and putting into it one property per line:
@@ -97,11 +147,12 @@ Add a new line with: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,addr
 
 
 ## Contributing to alf.io
-Importing the Gradle project into Intellij and Eclipse both work.
+Importing the Maven project into IntelliJ IDEA and Eclipse both work.
 
 **Notes**:
 - this project uses [Project Lombok](https://projectlombok.org/). You will need to install the corresponding Lombok plugin for integration into your IDE.
 - this project uses [TestContainers](https://testcontainers.org) to run integration tests against a real PostgreSQL database. Please make sure that your configuration meets [their requirements](https://www.testcontainers.org/supported_docker_environment/)
+- See the **[DDD Documentation](./docs/)** to understand the domain model and architecture before making changes
 
 <details><summary>How to configure TestContainers with Podman (Fedora 34)</summary>
 <p>
@@ -130,7 +181,9 @@ To be noted:
 
 ## Check dependencies to update
 
-`./gradlew dependencyUpdates`
+```bash
+mvn versions:display-dependency-updates
+```
 
 ## Running Docker containers
 
@@ -158,12 +211,17 @@ However, if you decide to do so, then you need to make a couple of changes:
 ### Generate a new version of the alfio/alf.io docker image
 
 #### Build application and Dockerfile
+ ```bash
+ mvn clean package
  ```
- ./gradlew distribution
- ```
-Alternatively, you can use Docker (*experimental*):
- ```
- docker run --rm -u gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:7.0.0-jdk11 gradle --no-daemon distribution -x test
+ 
+The Docker-ready artifacts will be created in `target/dockerize/`:
+- `alfio-boot.jar` - The Spring Boot executable JAR
+- `Dockerfile` - Ready to build Docker image
+
+Alternatively, you can use Docker to build (*experimental*):
+ ```bash
+ docker run --rm -v "$PWD":/workspace -w /workspace maven:3.9-eclipse-temurin-17 mvn clean package -DskipTests
  ```
 
 Please note that at the moment the command above performs the build without running the automated tests.

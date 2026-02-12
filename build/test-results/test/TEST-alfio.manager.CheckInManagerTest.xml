@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.CheckInManagerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:49" hostname="mac.home" time="0.038">
+  <properties/>
+  <testcase name="getStatisticsDisabled()" classname="alfio.manager.CheckInManagerTest" time="0.038"/>
+  <testcase name="getStatistics()" classname="alfio.manager.CheckInManagerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

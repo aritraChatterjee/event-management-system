@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.util.EventUtilTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:01" hostname="mac.home" time="0.038">
+  <properties/>
+  <testcase name="do not display the waiting list form if the waiting list is disabled" classname="alfio.util.EventUtilTest" time="0.028"/>
+  <testcase name="return price if event is not free of charge" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="display the waiting list form before sales start" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="not display the waiting list form after sales start" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="recognize if the ticket holder must access the event online" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="do not display the waiting list form if the last category is expired" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="recognize post-sales period" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="do not display the waiting list form if the only category is not expired" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="recognize pre-sales from first category" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="do not display the waiting list form if the category list is empty" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="do not display the waiting list form if there are yet available seats" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="display the waiting list form if the only category is not expired and sold-out" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="recognize pre-sales period" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="recognizePostSalesFromFirstCategory()" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="display the waiting list form if the last category is not expired and sold-out" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="display the waiting list form if the last category is not expired and sold-out (reversed)" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="not display the waiting list form before sales start if pre-registration is not enabled" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="not display the waiting list form after sales start (two categories)" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <testcase name="return price if event is not free of charge" classname="alfio.util.EventUtilTest" time="0.001"/>
+  <testcase name="display the waiting list form before sales start (2 categories)" classname="alfio.util.EventUtilTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.util.ValidatorTest" tests="66" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:03" hostname="mac.home" time="0.085">
+  <properties/>
+  <testcase name="successfulDescriptionValidation()" classname="alfio.util.ValidatorTest" time="0.058"/>
+  <testcase name="successfulCategoryDescriptionValidationWhenEmpty()" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="testValidationFailedDescription()" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[1] address=test.example.org" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[2] address=test_test-test" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="testValidationErrorInceptionNull()" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="successfulCategoryDescriptionValidation()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[1] url=ftp://my-server" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[2] url=chrome-extension://blabla" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="failedDescriptionValidation()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="testValidationInceptionExpirationNull()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="testValidationExpirationNull()" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="testValidationFailedDescriptionsDontMatchTitles()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="accessTypeMandatoryForHybridEvent()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[1] url=http://my-server" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[2] url=https://my-server" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[1] minAgeAsString=1, birthDateAsString=2023-02-28, todayAsString=2024-02-28" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[2] minAgeAsString=1, birthDateAsString=2023-03-01, todayAsString=2024-03-01" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[3] minAgeAsString=2, birthDateAsString=2022-02-28, todayAsString=2024-02-28" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[4] minAgeAsString=2, birthDateAsString=2022-03-01, todayAsString=2024-03-01" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[5] minAgeAsString=3, birthDateAsString=2021-02-28, todayAsString=2024-02-28" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[6] minAgeAsString=3, birthDateAsString=2021-03-01, todayAsString=2024-03-01" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[7] minAgeAsString=4, birthDateAsString=2020-02-28, todayAsString=2024-02-28" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[8] minAgeAsString=4, birthDateAsString=2020-03-01, todayAsString=2024-03-01" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[9] minAgeAsString=5, birthDateAsString=2019-02-28, todayAsString=2024-02-28" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[10] minAgeAsString=5, birthDateAsString=2019-03-01, todayAsString=2024-03-01" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[11] minAgeAsString=5, birthDateAsString=2018-03-01, todayAsString=2023-03-01" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="validateDateInThePast()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[1] address=test@example.o" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[2] address=test@example.org." classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[3] address=test@example.org&lt;" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[4] address=test@localhost" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[5] address=test_test-test@sub.sub.o" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[1] maxAgeAsString=1, birthDateAsString=2023-02-28, todayAsString=2024-02-27" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[2] maxAgeAsString=1, birthDateAsString=2023-03-01, todayAsString=2024-02-29" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[3] maxAgeAsString=2, birthDateAsString=2022-02-28, todayAsString=2024-02-27" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[4] maxAgeAsString=2, birthDateAsString=2022-03-01, todayAsString=2024-02-29" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[5] maxAgeAsString=3, birthDateAsString=2021-02-28, todayAsString=2024-02-27" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[6] maxAgeAsString=3, birthDateAsString=2021-03-01, todayAsString=2024-02-29" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[7] maxAgeAsString=4, birthDateAsString=2020-02-28, todayAsString=2024-02-27" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[8] maxAgeAsString=4, birthDateAsString=2020-03-01, todayAsString=2024-02-29" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[9] maxAgeAsString=5, birthDateAsString=2019-02-28, todayAsString=2024-02-27" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[10] maxAgeAsString=5, birthDateAsString=2019-03-01, todayAsString=2024-02-29" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[11] maxAgeAsString=5, birthDateAsString=2018-03-01, todayAsString=2023-02-28" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="testValidationSuccess()" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[1] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=null, finalDate=null, strict=false, expectedResult=OK" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[2] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=null, finalDate=null, strict=true, expectedResult=OK" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[3] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-13T08:00:00, finalDate=2025-03-13T18:00:00, strict=false, expectedResult=OK" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[4] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-13T08:00:00, finalDate=2025-03-13T18:00:00, strict=true, expectedResult=OK" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[5] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-12T08:00:00, finalDate=2025-03-13T18:00:00, strict=false, expectedResult=OK" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[6] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-13T07:59:59, finalDate=2025-03-13T18:00:00, strict=true, expectedResult=FAILED_BEGIN" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[7] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-13T08:00:00, finalDate=2025-03-13T08:00:00, strict=true, expectedResult=FAILED_END" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[8] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-12T08:00:00, finalDate=2025-03-13T18:00:00, strict=true, expectedResult=FAILED_BEGIN" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[9] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-12T08:00:00, finalDate=2025-03-13T18:00:00, strict=true, expectedResult=FAILED_BEGIN" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[10] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-13T08:00:00, finalDate=2025-03-13T18:00:01, strict=false, expectedResult=FAILED_END" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[11] eventBegin=2025-03-13T08:00:00, eventEnd=2025-03-13T18:00:00, initialDate=2025-03-13T08:00:00, finalDate=2025-03-13T18:00:01, strict=true, expectedResult=FAILED_END" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="failedCategoryDescriptionValidation()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[1] address=test@example.org" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[2] address=test@sub.example.org" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[3] address=test_test-test@sub.sub.example-example.org" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[4] address=test@example.เน็ต.ไทย" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="testValidationErrorExpirationBeforeInception()" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[1] address=test@example.org" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[2] address=test@localhost" classname="alfio.util.ValidatorTest" time="0.001"/>
+  <testcase name="[3] address=test_test-test@sub.sub.example-example.org" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <testcase name="[4] address=test@example.เน็ต.ไทย" classname="alfio.util.ValidatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

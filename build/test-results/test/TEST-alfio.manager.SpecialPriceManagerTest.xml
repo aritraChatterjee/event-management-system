@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.SpecialPriceManagerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:50" hostname="mac.home" time="0.165">
+  <properties/>
+  <testcase name="validationErrorTooManyCodesRequested()" classname="alfio.manager.SpecialPriceManagerTest" time="0.155"/>
+  <testcase name="validationErrorCategoryNotRestricted()" classname="alfio.manager.SpecialPriceManagerTest" time="0.001"/>
+  <testcase name="sendAllCodes()" classname="alfio.manager.SpecialPriceManagerTest" time="0.003"/>
+  <testcase name="trimLanguageTag()" classname="alfio.manager.SpecialPriceManagerTest" time="0.001"/>
+  <testcase name="linkAssigneeToCode()" classname="alfio.manager.SpecialPriceManagerTest" time="0.001"/>
+  <testcase name="sendSuccessfulComplete()" classname="alfio.manager.SpecialPriceManagerTest" time="0.001"/>
+  <testcase name="usePartnerCode()" classname="alfio.manager.SpecialPriceManagerTest" time="0.001"/>
+  <testcase name="validationErrorRequestedCodeIsNotAvailable()" classname="alfio.manager.SpecialPriceManagerTest" time="0.0"/>
+  <testcase name="validationErrorCodeRequestedTwice()" classname="alfio.manager.SpecialPriceManagerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

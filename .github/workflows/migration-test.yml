@@ -27,8 +27,8 @@ jobs:
               with:
                   java-version: 17
                   distribution: temurin
-                  cache: 'gradle'
-            - name: Build with Gradle
-              run: ./gradlew test --no-daemon --tests MigrationValidatorTest
+                  cache: 'maven'
+            - name: Build with Maven
+              run: mvn test -Dtest=MigrationValidatorTest
               env:
                   MIGRATION_TEST: "true"

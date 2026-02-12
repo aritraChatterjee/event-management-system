@@ -15,16 +15,10 @@ jobs:
             - uses: actions/checkout@v4
             - uses: actions/cache@v4
               with:
-                  path: ~/.gradle/caches
-                  key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+                  path: ~/.m2/repository
+                  key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
                   restore-keys: |
-                      ${{ runner.os }}-gradle-
-            - uses: actions/cache@v4
-              with:
-                  path: ~/.gradle/wrapper
-                  key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradlew') }}
-                  restore-keys: |
-                      ${{ runner.os }}-gradlew-
+                      ${{ runner.os }}-maven-
             - name: Set up JDK
               uses: actions/setup-java@v4
               with:
@@ -35,8 +29,8 @@ jobs:
               with:
                   username: ${{ secrets.BROWSERSTACK_USERNAME }}
                   access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-            - name: Build with Gradle
-              run: ./gradlew test -Dspring.profiles.active=travis,e2e --tests NormalFlowE2ETest
+            - name: Build with Maven
+              run: mvn test -Dspring.profiles.active=travis,e2e -Dtest=NormalFlowE2ETest
               env:
                   E2E_SERVER_APIKEY: ${{ secrets.E2E_SERVER_APIKEY }}
                   E2E_SERVER_URL: ${{ secrets.E2E_SERVER_URL }}

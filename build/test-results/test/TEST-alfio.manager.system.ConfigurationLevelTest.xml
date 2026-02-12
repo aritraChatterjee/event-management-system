@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.system.ConfigurationLevelTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:52" hostname="mac.home" time="0.0">
+  <properties/>
+  <testcase name="external()" classname="alfio.manager.system.ConfigurationLevelTest" time="0.0"/>
+  <testcase name="system()" classname="alfio.manager.system.ConfigurationLevelTest" time="0.0"/>
+  <testcase name="ticketCategory()" classname="alfio.manager.system.ConfigurationLevelTest" time="0.0"/>
+  <testcase name="event()" classname="alfio.manager.system.ConfigurationLevelTest" time="0.0"/>
+  <testcase name="organization()" classname="alfio.manager.system.ConfigurationLevelTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

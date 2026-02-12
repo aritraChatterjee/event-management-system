@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.util.PinGeneratorTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:03" hostname="mac.home" time="0.004">
+  <properties/>
+  <testcase name="checkValue()" classname="alfio.util.PinGeneratorTest" time="0.001"/>
+  <testcase name="[1] uuid=0cea7af7-899d-4de4-9ba1-414469b7d69c" classname="alfio.util.PinGeneratorTest" time="0.001"/>
+  <testcase name="[2] uuid=c09644d4-3694-4183-ba85-77a7a5f77829" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[3] uuid=00000000-0000-0000-0000-000000000000" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[4] uuid=ffffffff-3694-4183-ba85-77a7a5f77829" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[5] uuid=ffffffff-ffff-4183-ba85-77a7a5f77829" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[1] pin=AAAAAA" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[2] pin=aaaaaa" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[3] pin=CEURQ3" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[4] pin=U96U6T" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[5] pin=4TM34T" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[1] pin=AAAAA" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[2] pin= AAAAA" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[3] pin=aaaaa " classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[4] pin=CEURZ3" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <testcase name="[5] pin=000000" classname="alfio.util.PinGeneratorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

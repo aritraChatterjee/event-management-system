@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:01" hostname="mac.home" time="0.07">
+  <properties/>
+  <testcase name="[1] value=[&quot;value1&quot;,&quot;value2&quot;], expectedResult=first value, second value" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.067"/>
+  <testcase name="[2] value=[&quot;value1&quot;], expectedResult=first value" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <testcase name="[3] value=[&quot;value2&quot;], expectedResult=second value" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <testcase name="[4] value=[&quot;value1&quot;,&quot;null&quot;,&quot;value2&quot;], expectedResult=first value, second value" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <testcase name="[1] type=input:text" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <testcase name="[2] type=input:tel" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <testcase name="[3] type=textarea" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <testcase name="[4] type=vat:eu" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.001"/>
+  <testcase name="[1] type=select" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <testcase name="[2] type=radio" classname="alfio.model.PurchaseContextFieldConfigurationDescriptionAndValueTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.util.MustacheCustomTagTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:03" hostname="mac.home" time="0.007">
+  <properties/>
+  <testcase name="acceptOnlyHttpOrHttpsProtocols()" classname="alfio.util.MustacheCustomTagTest" time="0.001"/>
+  <testcase name="translateCountryCode()" classname="alfio.util.MustacheCustomTagTest" time="0.001"/>
+  <testcase name="additionalFieldValueMapIsEmptyOrNull()" classname="alfio.util.MustacheCustomTagTest" time="0.0"/>
+  <testcase name="additionalFieldValue()" classname="alfio.util.MustacheCustomTagTest" time="0.0"/>
+  <testcase name="additionalFieldValuePrefix()" classname="alfio.util.MustacheCustomTagTest" time="0.001"/>
+  <testcase name="additionalFieldValueSuffix()" classname="alfio.util.MustacheCustomTagTest" time="0.0"/>
+  <testcase name="testHtmlMarkDown()" classname="alfio.util.MustacheCustomTagTest" time="0.002"/>
+  <testcase name="additionalFieldValueMapDoesNotContainValue()" classname="alfio.util.MustacheCustomTagTest" time="0.0"/>
+  <system-out><![CDATA[2025-07-13 12:09:03 5.15.0 INFO User tried to set an url with scheme any, only http/https are accepted, href has been removed 
+2025-07-13 12:09:03 5.15.0 INFO User tried to set an url with scheme other, only http/https are accepted, href has been removed 
+2025-07-13 12:09:03 5.15.0 INFO User tried to set an url with scheme protocols, only http/https are accepted, href has been removed 
+2025-07-13 12:09:03 5.15.0 WARNING map not found or empty. Skipping additionalFieldValue tag 
+2025-07-13 12:09:03 5.15.0 WARNING map not found or empty. Skipping additionalFieldValue tag 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

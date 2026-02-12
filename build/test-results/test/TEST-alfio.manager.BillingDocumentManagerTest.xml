@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alfio.manager.BillingDocumentManagerTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:08:49" hostname="mac.home" time="0.446">
+  <properties/>
+  <testcase name="generateInvoiceNumberFromExtension()" classname="alfio.manager.BillingDocumentManagerTest" time="0.43"/>
+  <testcase name="generateInvoiceNumberFromSequence()" classname="alfio.manager.BillingDocumentManagerTest" time="0.003"/>
+  <testcase name="reuseInvoiceNumberForCreditNote()" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="generateCreditNoteNumberFromExtension()" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="[1] pattern=TEST-%d, expected=TEST-123" classname="alfio.manager.BillingDocumentManagerTest" time="0.002"/>
+  <testcase name="[2] pattern=null, expected=123" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="generateCreditNoteNumberFromSequence()" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="[1] hasAllConfiguration=0, requiresPayment=0, invoiceRequested=0" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="[2] hasAllConfiguration=0, requiresPayment=0, invoiceRequested=1" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="[3] hasAllConfiguration=0, requiresPayment=1, invoiceRequested=0" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="[4] hasAllConfiguration=0, requiresPayment=1, invoiceRequested=1" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <testcase name="[5] hasAllConfiguration=1, requiresPayment=0, invoiceRequested=0" classname="alfio.manager.BillingDocumentManagerTest" time="0.0"/>
+  <testcase name="[6] hasAllConfiguration=1, requiresPayment=0, invoiceRequested=1" classname="alfio.manager.BillingDocumentManagerTest" time="0.0"/>
+  <testcase name="[7] hasAllConfiguration=1, requiresPayment=1, invoiceRequested=0" classname="alfio.manager.BillingDocumentManagerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

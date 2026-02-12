@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Adjust to next week day" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-07-13T10:09:03" hostname="mac.home" time="0.002">
+  <properties/>
+  <testcase name="do nothing if the date is within range (start)" classname="alfio.util.WorkingDaysAdjustersTest" time="0.001"/>
+  <testcase name="add days" classname="alfio.util.WorkingDaysAdjustersTest" time="0.0"/>
+  <testcase name="adjust date to to next hour" classname="alfio.util.WorkingDaysAdjustersTest" time="0.0"/>
+  <testcase name="adjust date to next monday and time to next hour" classname="alfio.util.WorkingDaysAdjustersTest" time="0.0"/>
+  <testcase name="adjust date to next monday, same hour" classname="alfio.util.WorkingDaysAdjustersTest" time="0.0"/>
+  <testcase name="do nothing if the date is within range (middle)" classname="alfio.util.WorkingDaysAdjustersTest" time="0.0"/>
+  <testcase name="do nothing if the date is within range (end)" classname="alfio.util.WorkingDaysAdjustersTest" time="0.0"/>
+  <testcase name="add days, ignore weekend" classname="alfio.util.WorkingDaysAdjustersTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
